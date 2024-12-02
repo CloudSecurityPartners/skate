@@ -6,6 +6,10 @@ class CartsController < ApplicationController
         render json: @carts
     end
 
+    def load_card
+        @cart = Marshal.load(params[:serialized_cart])
+    end
+
     def show
     end
 

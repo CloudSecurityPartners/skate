@@ -9,7 +9,6 @@ class ReviewsController < ApplicationController
     def new
     end
 
-    # INSECURE: Potential IDOR?
     def create
         product = Product.find(params[:review][:product])
 
@@ -25,7 +24,6 @@ class ReviewsController < ApplicationController
     def edit
     end
     
-    # Insecure: Mass Assignment?
     def update
         @review.update!(review_updata_params)
     end

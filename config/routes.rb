@@ -5,14 +5,8 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  namespace :admin do
-    resources :products
-    resources :categories
-  end
-
   resources :analytics, only: [:index]
 
-  resources :brand, only: [:index]
   resources :carts, only: [:index, :show, :edit, :update, :destroy]
   resources :checkout, only: [:create]
 

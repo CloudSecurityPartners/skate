@@ -1,5 +1,4 @@
 class AnalyticsController < ApplicationController
-    # table=products+union+select+cost+from+Products
     def index
         @table = params[:table]
 

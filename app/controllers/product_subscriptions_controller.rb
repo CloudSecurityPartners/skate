@@ -1,8 +1,3 @@
-#
-# Our customers have been interested in product notifications. 
-# This endpoint serves as a subscription-type model so customers
-# can subscribe for updates to products.
-#
 class ProductSubscriptionsController < ApplicationController
     skip_before_action :verify_authenticity_token
     
